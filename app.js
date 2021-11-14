@@ -190,6 +190,8 @@ function searchVenuesByArea(match) {
     return paginate(searchedVenues, paginateCount)
 }
 
-// console.log(module.exports = [filterVenuesByRating])
-
-console.log(filterVenuesByCity("Bangalore")[1].length)
+module.exports = {
+    filterVenuesByCity, filterVenuesBySports, filterVenuesByBooking,
+    filterVenuesByRating, filterVenuesByAmenities, searchVenuesByName, searchVenuesByCity,
+    searchVenuesByArea
+}
