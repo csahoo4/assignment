@@ -1,6 +1,11 @@
 const sample = require("../sample.json")
 const paginateCount = 5
 
+/** 
+ * Filters out Venues by City
+ * @param {String} city - The city which should be filtered out
+ * @return {Array} - Filtered out veneues with pagination
+*/
 function filterVenuesByCity(city) {
     // validate input
     if (typeof city !== "string" || city === null || city === "") {
@@ -18,6 +23,13 @@ function filterVenuesByCity(city) {
     return paginate(filteredVenues, paginateCount)
 }
 
+
+/** 
+ * Paginate the venues with 5 venues per array
+ * @param {JSON} venues - Filtered out Venues
+ * @param {number} size - Paginate Count
+ * @return {Array} - Paginated array
+*/
 function paginate(venues, size) {
     var arr = [], i = 1, paginatedArray = []
 
@@ -34,6 +46,11 @@ function paginate(venues, size) {
     return paginatedArray
 }
 
+/** 
+ * Filters out Venues by Sports
+ * @param {Array<String>} sports - The sports which should be filtered out
+ * @return {Array} - Filtered out veneues with pagination
+*/
 function filterVenuesBySports(sports) {
     // validate input
     if (typeof sports !== "object" || sports === null) {
@@ -63,6 +80,11 @@ function filterVenuesBySports(sports) {
     return paginate(filteredVenues, paginateCount)
 }
 
+/** 
+ * Filters out Venues by category
+ * @param {number} category - The category which should be filtered out, category=2 for bookable venues
+ * @return {Array} - Filtered out veneues with pagination
+*/
 function filterVenuesByBooking(category) {
     // validate input
     if (typeof category !== "number" || category === null) {
@@ -83,6 +105,11 @@ function filterVenuesByBooking(category) {
     return paginate(filteredVenues, paginateCount)
 }
 
+/** 
+ * Filters out Venues by Rating
+ * @param {number} avgRating - The rating which should be filtered out
+ * @return {Array} - Filtered out veneues with pagination
+*/
 function filterVenuesByRating(avgRating) {
     // validate input
     if (typeof avgRating !== "number" || avgRating === null) {
@@ -100,6 +127,11 @@ function filterVenuesByRating(avgRating) {
     return paginate(filteredVenues, paginateCount)
 }
 
+/** 
+ * Filters out Venues by amenities
+ * @param {Array<String>} amenities - The amenities which should be filtered out
+ * @return {Array} - Filtered out veneues with pagination
+*/
 function filterVenuesByAmenities(amenities) {
     // validate input
     if (typeof amenities !== "object" || amenities === null) {
@@ -129,6 +161,11 @@ function filterVenuesByAmenities(amenities) {
     return paginate(filteredVenues, paginateCount)
 }
 
+/** 
+ * Search Venues by Name
+ * @param {String} match - The name which should be searched
+ * @return {Array} - Veneues that matches the Name with pagination
+*/
 function searchVenuesByName(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
@@ -146,6 +183,11 @@ function searchVenuesByName(match) {
     return paginate(searchedVenues, paginateCount)
 }
 
+/** 
+ * Search Venues by City
+ * @param {String} match - The city which should be searched
+ * @return {Array} - Veneues that matches the City with pagination
+*/
 function searchVenuesByCity(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
@@ -163,6 +205,11 @@ function searchVenuesByCity(match) {
     return paginate(searchedVenues, paginateCount)
 }
 
+/** 
+ * Search Venues by Area
+ * @param {String} match - The area which should be searched
+ * @return {Array} - Veneues that matches the Area with pagination
+*/
 function searchVenuesByArea(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
