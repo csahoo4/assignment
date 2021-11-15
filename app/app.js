@@ -4,8 +4,7 @@ const paginateCount = 5
 function filterVenuesByCity(city) {
     // validate input
     if (typeof city !== "string" || city === null || city === "") {
-        console.log("Please provide a valid city name.")
-        return
+        return "Please provide a valid city name."
     }
 
     var filteredVenues = {}
@@ -38,14 +37,12 @@ function paginate(venues, size) {
 function filterVenuesBySports(sports) {
     // validate input
     if (typeof sports !== "object" || sports === null) {
-        console.log("Please provide a valid sport name.")
-        return
+        return "Please provide a valid sport name."
     }
 
     for (var i = 0; i < sports.length; ++i) {
         if (typeof sports[i] !== "string" || sports[i] === null || sports[i] === "") {
-            console.log("Please provide a valid sport name.")
-            return
+            return "Please provide a valid sport name."
         }
     }
 
@@ -69,8 +66,7 @@ function filterVenuesBySports(sports) {
 function filterVenuesByBooking(category) {
     // validate input
     if (typeof category !== "number" || category === null) {
-        console.log("Please provide a valid category.")
-        return
+        return "Please provide a valid category."
     }
 
     var filteredVenues = {}
@@ -90,8 +86,7 @@ function filterVenuesByBooking(category) {
 function filterVenuesByRating(avgRating) {
     // validate input
     if (typeof avgRating !== "number" || avgRating === null) {
-        console.log("Please provide a valid rating.")
-        return
+        return "Please provide a valid rating."
     }
 
     var filteredVenues = {}
@@ -108,14 +103,12 @@ function filterVenuesByRating(avgRating) {
 function filterVenuesByAmenities(amenities) {
     // validate input
     if (typeof amenities !== "object" || amenities === null) {
-        console.log("Please provide a valid amenity name.")
-        return
+        return "Please provide a valid amenity name."
     }
 
     for (var i = 0; i < amenities.length; ++i) {
         if (typeof amenities[i] !== "string" || amenities[i] === null || amenities[i] === "") {
-            console.log("Please provide a valid amenity name.")
-            return
+            return "Please provide a valid amenity name."
         }
     }
 
@@ -139,8 +132,7 @@ function filterVenuesByAmenities(amenities) {
 function searchVenuesByName(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
-        console.log("Please provide a valid venue name.")
-        return
+        return "Please provide a valid venue name."
     }
 
     var searchedVenues = {}
@@ -157,8 +149,7 @@ function searchVenuesByName(match) {
 function searchVenuesByCity(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
-        console.log("Please provide a valid city name.")
-        return
+        return "Please provide a valid city name."
     }
 
     var searchedVenues = {}
@@ -175,8 +166,7 @@ function searchVenuesByCity(match) {
 function searchVenuesByArea(match) {
     // validate input
     if (typeof match !== "string" || match === null || match === "") {
-        console.log("Please provide a valid area name.")
-        return
+        return "Please provide a valid area name."
     }
 
     var searchedVenues = {}
