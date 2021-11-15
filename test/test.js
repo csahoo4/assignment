@@ -1,8 +1,5 @@
 const test = require("../app/app.js")
 const assert = require('assert');
-// const arr = [filterVenuesByCity, filterVenuesBySports, filterVenuesByBooking,
-//     filterVenuesByRating, filterVenuesByAmenities, searchVenuesByName, searchVenuesByCity,
-//     searchVenuesByArea]
 
 function test_filterVenuesByCity() {
     assert(test.filterVenuesByCity("Bangalore")[0].length === 5)
