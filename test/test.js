@@ -64,6 +64,14 @@ function test_searchVenuesByArea() {
     assert(test.searchVenuesByArea(match) === "Please provide a valid area name.")
 }
 
+function test_sortByRating() {
+    assert(test.sortByRating().length > 0)
+}
+
+function test_sortByMostRated() {
+    assert(test.sortByMostRated().length > 0)
+}
+
 test_filterVenuesByCity()
 test2_filterVenuesByCity()
 test_filterVenuesBySports()
@@ -77,3 +85,5 @@ test2_filterVenuesByAmenities()
 test_searchVenuesByName()
 test_searchVenuesByCity()
 test_searchVenuesByArea()
+test_sortByRating()
+test_sortByMostRated()

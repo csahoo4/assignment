@@ -227,8 +227,38 @@ function searchVenuesByArea(match) {
     return paginate(searchedVenues, paginateCount)
 }
 
+/** 
+ * Sorts Venues by Rating in increasing order
+ * @return {Array} - Sorted Veneues by Rating
+*/
+function sortByRating() {
+    var venues = []
+
+    Object.keys(sample).forEach(element => {
+        venues.push(sample[element])
+    });
+
+    venues.sort((a, b) => { return a.avgRating - b.avgRating })
+    return venues
+}
+
+/** 
+ * Sorts Venues by Most Rated in descending order
+ * @return {Array} - Sorted Veneues by Most Rated
+*/
+function sortByMostRated() {
+    var venues = []
+
+    Object.keys(sample).forEach(element => {
+        venues.push(sample[element])
+    });
+
+    venues.sort((a, b) => { return b.ratingCount - a.ratingCount })
+    return venues
+}
+
 module.exports = {
     filterVenuesByCity, filterVenuesBySports, filterVenuesByBooking,
     filterVenuesByRating, filterVenuesByAmenities, searchVenuesByName, searchVenuesByCity,
-    searchVenuesByArea
+    searchVenuesByArea, sortByRating, sortByMostRated
 }
