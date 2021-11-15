@@ -47,7 +47,25 @@ function test_filterVenuesByAmenities() {
     assert(test.filterVenuesByAmenities(amenities) === "Please provide a valid amenity name.")
 }
 
+function test2_filterVenuesByAmenities() {
+    var amenities = ["DLF"]
+    assert(test.filterVenuesByAmenities(amenities).length === 0)
+}
 
+function test_searchVenuesByName() {
+    var match = ""
+    assert(test.searchVenuesByName(match) === "Please provide a valid venue name.")
+}
+
+function test_searchVenuesByCity() {
+    var match = ""
+    assert(test.searchVenuesByCity(match) === "Please provide a valid city name.")
+}
+
+function test_searchVenuesByArea() {
+    var match = ""
+    assert(test.searchVenuesByArea(match) === "Please provide a valid area name.")
+}
 
 test_filterVenuesByCity()
 test2_filterVenuesByCity()
@@ -58,3 +76,7 @@ test2_filterVenuesByBooking()
 test_filterVenuesByRating()
 test2_filterVenuesByRating()
 test_filterVenuesByAmenities()
+test2_filterVenuesByAmenities()
+test_searchVenuesByName()
+test_searchVenuesByCity()
+test_searchVenuesByArea()
